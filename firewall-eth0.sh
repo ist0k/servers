@@ -1,6 +1,6 @@
 #!/bin/bash
 # chkconfig: 2345 08 92
-# syntax: ./firewall-eth0.sh start|stop|restart
+# syntax: sudo /etc/init.d/firewall-eth0.sh start|stop|restart
 #
 ### BEGIN INIT INFO
 # Provides:          firewall
@@ -8,7 +8,7 @@
 # Required-Stop:     $network 
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: iptables start/stop/restart script
+# Short-Description: iptables start|stop|estart script
 ### END INIT INFO
 #
 # $Id: firewall,v 1.5 24-12-2014 02:05:34 cvs Exp $
