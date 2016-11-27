@@ -1,6 +1,9 @@
 #!/bin/bash
 # chkconfig: 2345 08 92
-# syntax: sudo /etc/init.d/firewall-eth0.sh start|stop|restart
+#
+# Save/Move script to /etc/init.d/ and chmod +x /etc/init.d/firewall-eth0.sh
+# Syntax: sudo /etc/init.d/firewall-eth0.sh start|stop|restart
+# Automation: sudo update-rc.d firewall-eth0.sh defaults
 #
 ### BEGIN INIT INFO
 # Provides:          firewall
@@ -8,7 +11,10 @@
 # Required-Stop:     $network 
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: iptables start|stop|estart script
+# Short-Description: iptables start|stop|restart script
+#
+# Rename this script for each interface you wish to secure.
+# Example: firewall-eth1.sh, firewall-eth0:1.sh
 ### END INIT INFO
 #
 # $Id: firewall,v 1.5 24-12-2014 02:05:34 cvs Exp $
